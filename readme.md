@@ -37,38 +37,31 @@ Programovatelné automaty (PLC)
 | Oblast nasazení | Vhodná koncepce PLC (kompaktní / modulární / embedded) | Typický zástupce z portfolia Teco (nebo ekvivalent) | Klíčové technické parametry (sběrnice, I/O, napájení, krytí) |
 | :--- | :--- | :--- | :--- |
 | **Automatizace domů a budov (HVAC, Smart Home) - VZOR** | Kompaktní PLC na DIN lištu s integrovanou instalační sběrnicí | **Tecomat Foxtrot 2** (např. centrální jednotka CP-2007 nebo CP-2000)<br><br> <img width="200" height="134" alt="image" src="https://github.com/user-attachments/assets/67f80b4e-9d35-4f3c-bc0b-bed521b1ed04" /> | Dvě dvoudrátové sběrnice CIB (Common Installation Bus) s napájením prvků po sběrnici, LAN Ethernet, webserver, nízká spotřeba, relé 230 V / 16 A, krytí IP20. |
-| **Automatizace jednoúčelových strojů a linek** | Modulární PLC / Kompaktní PLC s vysokou hustotou I/O a funkcemi rychlého čítání | **Tecomat TC800** (případně Tecomat TC700)<br><br> <img width="500" height="271" alt="image" src="https://github.com/user-attachments/assets/612ad280-f876-4c26-8adc-ace95340971b" /> <img width="251" height="400" alt="image" src="https://github.com/user-attachments/assets/67581049-7bcd-484f-af7e-e55050c1047b" /> | Rychlá systémová sběrnice, modularita (rozšiřující I/O moduly), 2× Ethernet, komunikace RS-485 / RS-232, napájení 24 V DC, krytí IP20. |
-| **Rozsáhlé procesní řízení a velké energetické celky** | Modulární PLC s vícerámovou architekturou a možností redundance | **Tecomat TC800** (např. sestava v rámu)<br><br>![Tecomat TC800 System](https://www.tecomat.cz/images/produkty/tc800-rack.jpg) | Vysoká paměťová kapacita, podpora stovek až tisíců I/O bodů, ethernetová komunikace, sběrnice Profibus DP / Modbus RTU/TCP, napájení 24 V DC / 230 V AC, průmyslové krytí IP20. |
-| **Strojní zařízení s vestavěnou elektronikou (Embedded)** | Embedded / Open Frame (deskové PLC bez krytu určené k vestavbě) | OEM deskové jednotky Teco řady Foxtrot (např. CP-2970 nebo CP-2940)<br><br>![Teco OEM Foxtrot](https://wiki.tecomat.cz/soubory/clanky/oem-ridici-systemy-foxtrot-a-oem-periferni-moduly/cp-2970.png) | Jednodeskové provedení, integrované analogové a binární I/O, řízení EEV ventilů, 2× Ethernet, sběrnice CIB a TCL2, RS-485, napájení 24 V DC / 230 V AC, krytí IP00 (chráněno skříní zařízení). |                                                                                                                                 |
+| **Automatizace jednoúčelových strojů a linek** | Modulární PLC / Kompaktní PLC s vysokou hustotou I/O a funkcemi rychlého čítání | **Tecomat TC800** (případně Tecomat TC700 viz obrazek:)<br><br> <img width="362" height="800" alt="image" src="https://github.com/user-attachments/assets/b75e95ba-6e2c-4559-ab42-6e255c3a8b09" /> | Rychlá systémová sběrnice, modularita (rozšiřující I/O moduly), 2× Ethernet, komunikace RS-485 / RS-232, napájení 24 V DC, krytí IP20. |
+| **Rozsáhlé procesní řízení a velké energetické celky** | Modulární PLC s vícerámovou architekturou a možností redundance | **Tecomat TC800** (např. sestava v rámu)<br><br> <img width="800" height="571" alt="image" src="https://github.com/user-attachments/assets/cf5c18de-fdef-4376-911e-b7f3db56ef17" />  | Vysoká paměťová kapacita, podpora stovek až tisíců I/O bodů, ethernetová komunikace, sběrnice Profibus DP / Modbus RTU/TCP, napájení 24 V DC / 230 V AC, průmyslové krytí IP20. |
+| **Strojní zařízení s vestavěnou elektronikou (Embedded)** | Embedded / Open Frame (deskové PLC bez krytu určené k vestavbě) | OEM deskové jednotky Teco řady Foxtrot (např. CP-2970 nebo CP-2940)<br><br> <img width="800" height="561" alt="image" src="https://github.com/user-attachments/assets/8b2392eb-5d3a-40f1-bf30-17663155fbc6" />  | Jednodeskové provedení, integrované analogové a binární I/O, řízení EEV ventilů, 2× Ethernet, sběrnice CIB a TCL2, RS-485, napájení 24 V DC / 230 V AC, krytí IP00 (chráněno skříní zařízení). |                                                                                                                
 
-2. **PLC vs. Embedded PLC a další řídicí jednotky:**
-   - Jaký je zásadní rozdíl mezi standardním průmyslovým PLC v krabičce na DIN lištu a tzv. **Embedded PLC**? Co obecně vyjadřuje pojem *embedded* a v jakých dalších typech zařízení se s ním setkáváme?
-     - *Vaše vysvětlení:* `...`
 
-   - Doplňte do přehledové tabulky význam zkratek a oblast jejich nasazení:
+ 2. **PLC vs. Embedded PLC a další řídicí jednotky:
 
-| Zkratka      | Co zkratka znamená (anglicky / česky) | Pro jakou oblast řízení se primárně využívá                        | Typický operační / řídicí systém                 |
-| :----------- | :------------------------------------ | :----------------------------------------------------------------- | :----------------------------------------------- |
-| **iPC**      | Industrial PC / Průmyslové PC         | Vizualizace SCADA, řízení rozsáhlých technologických uzlů, SoftPLC | Průmyslový OS (Windows IoT Enterprise, Linux RT) |
-| **NC / CNC** | `...`                                 | `...`                                                              | `...`                                            |
-| **MCU**      | `...`                                 | `...`                                                              | `...` *(bare-metal bez OS nebo RTOS)*            |
-| **SoC**      | System on a chip                      | `...`                                                              | `...`                                            |
+* **Jaký je zásadní rozdíl mezi standardním průmyslovým PLC v krabičce na DIN lištu a tzv. Embedded PLC? Co obecně vyjadřuje pojem *embedded* a v jakých dalších typech zařízení se s ním setkáváme?**
+  * **Vaše vysvětlení:** Standardní průmyslové PLC je hotový, samostatně zapouzdřený přístroj (v krabičce na DIN lištu s krytím obvykle IP20) určený do rozvaděčů, vybavený vlastní svorkovnicí, napájením a odolností proti průmyslovému rušení. **Embedded PLC** (nebo také deskové PLC / OEM PLC) je realizováno jako deska plošných spojů (PCB) bez vnějšího krytu (krytí IP00), která je určena pro přímou vestavbu (embedded = vestavěný, zanořený) do těla konkrétního zařízení (např. do tepelného čerpadla, klimatizace nebo kompresoru). Pojem *embedded* obecně vyjadřuje jednoúčelový počítačový systém pevně integrovaný uvnitř většího zařízení, se kterým se setkáváme v domácích spotřebičích, automobilech, medicínské technice či IoT senzorech.
 
-> :key: **Vysvětlení pojmů a odborné zdroje:**
-> - **PLC (Programmable Logic Controller):** Průmyslový mikropočítačový systém určený pro deterministické řízení technologických procesů v reálném čase. Vyznačuje se vysokou odolností proti rušení, modulární koncepcí a cyklickým vykonáváním programu.
-	 Programovatelný logický automat. In: *Wikipedie: otevřená encyklopedie* [online]. San Francisco (CA): Wikimedia Foundation, 2024, 23. 2. 2024 v 09:19 [cit. 2026-09-20]. Dostupné z: https://cs.wikipedia.org/wiki/Programovateln%C3%BD_logick%C3%BD_automat
-> - **Embedded PLC:** Řídicí automat realizovaný jako deska plošných spojů pro přímé zabudování do stroje (OEM aplikace, např. tepelná čerpadla, kompresory) bez vnějšího krytu.
+* **Doplňte do přehledové tabulky význam zkratek a oblast jejich nasazení:**
 
-<details>
-<summary> :bulb: Tip k porovnání architektur: </summary>
-<p>Zatímco jednočipový mikrokontrolér (MCU) obsahuje procesor, paměti i periferie na jediném křemíkovém čipu a vyžaduje návrh desky plošných spojů, průmyslové PLC již v sobě integruje galvanické oddělení vstupů a výstupů, přepěťové ochrany, stabilizátory napětí a certifikované krytí pro montáž do elektrického rozváděče na DIN lištu.</p>
-</details>
+| Zkratka | Co zkratka znamená (anglicky / česky) | Pro jakou oblast řízení se primárně využívá | Typický operační / řídicí systém |
+| :--- | :--- | :--- | :--- |
+| **iPC** | Industrial PC / Průmyslové PC | Vizualizace SCADA, řízení rozsáhlých technologických uzlů, SoftPLC | Průmyslový OS (Windows IoT Enterprise, Linux RT) |
+| **NC / CNC** | Numerical Control / Computer Numerical Control (Číselné řízení / Počítačem řízené obrábění) | Řízení obráběcích strojů (frézky, soustruhy, lasery) s vysokou dynamikou a přesností interpolace | Real-time CNC jádro (např. Sinumerik, Fanuc, LinuxCNC) |
+| **MCU** | Microcontroller Unit / Mikrořadič | Řízení menších jednoúčelových zařízení, senzorů, pohonů, vestavěné elektroniky | (bare-metal bez OS nebo RTOS jako FreeRTOS) |
+| **SoC** | System on a Chip / Systém na čipu | Kompaktizovaná zařízení, IoT moduly, mobilní technika, smart zařízení | Embedded Linux, RTOS nebo bez OS |
 
-:star2: **Bonusová otázka k úloze 1:**
-Proč programátor v prostředí pro PLC (např. Teco Mosaic) nesmí ve standardní programové smyčce použít nekonečný blokující cyklus (nekonečná smyčka/infinite loop, např. `WHILE True DO ...`), se kterým se lze setkat u programování desktopových aplikací na PC a programování MCU? Jaký interní bezpečnostní mechanismus procesoru PLC by v takovém případě zasáhl?
+---
 
-*Vaše odpověď:*
-`...`
+### Bonusová otázka k úloze 1:
+**Proč programátor v prostředí pro PLC (např. Teco Mosaic) nesmí ve standardní programové smyčce použít nekonečný blokující cyklus (nekonečná smyčka/infinite loop, např. `WHILE True DO ...`), se kterým se lze setkat u programování desktopových aplikací na PC a programování MCU? Jaký interní bezpečnostní mechanismus procesoru PLC by v takovém případě zasáhl?**
+
+* **Vaše odpověď:** PLC fungují na principu **cyklického zpracování programu** (cyklický běh: čtení vstupů -> zpracování programu -> zápis výstupů). Pokud by programátor vložil do cyklu nekonečnou smyčku, PLC by se zacyklilo uvnitř jednoho cyklu, přerušilo by komunikaci, přestalo by číst vstupy a aktualizovat výstupy, což by vedlo ke ztrátě kontroly nad technologickým procesem. Interním bezpečnostním mechanismem, který v takovém případě zasáhne, je **Watchdog (hlídací časovač)**. Pokud cyklus trvá déle než povolený časový limit (např. několik milisekund), Watchdog vyvolá hardwarový reset PLC nebo přejde do chybového/bezpečnostního režimu (Fault mode).
 
 ---
 
